@@ -33,10 +33,10 @@ class PubMed:
 
         print(f"query_key: {self.qk}\nwebenv: {self.webenv}")
 
-    def esummary(self):
-        r = requests.get(self.api_base_url + f"esummary.fcgi?db=pubmed&query_key={self.qk}&WebEnv={self.webenv}")
+    #def esummary(self):
+        #r = requests.get(self.api_base_url + f"esummary.fcgi?db=pubmed&query_key={self.qk}&WebEnv={self.webenv}")
         #print(f'esummary: "{r.text}"')
-        return r.text
+        #return r.text
 
 
     def efetch(self, retmax=20):
