@@ -23,9 +23,3 @@ if __name__ == "__main__":
 
 
 
-'''
-Esearch = list of UID 
-ESummary = feeding the UID and getting summary
-EFetch = feed the UID and get some record
-load the esummary result  create class and object and then print the name of each article 
-'''
