@@ -3,7 +3,7 @@ import re
 
 class PubMedSearch:
     def __init__(self, xml_text):
-        self.root = ET.fromstring(xml_text)
+        self.root = ET.fromstring(self.sanitize(xml_text))
 
     def get_articles(self):
         articles = []
@@ -21,5 +21,12 @@ class PubMedSearch:
             articles.append(record)
         return articles
 
+    def sanitize(self, text):
+        sanitized_text = re.sub(r'<i>', '', text)
+        sanitized_text = re.sub(r'</i>', '', sanitized_text)
+        sanitized_text = re.sub(r'<b>', '', sanitized_text)
+        sanitized_text = re.sub(r'</b>', '', sanitized_text)
+        sanitized_text = re.sub('\n', '', sanitized_text)
 
+        return sanitized_text
 
