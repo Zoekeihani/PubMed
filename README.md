@@ -16,9 +16,9 @@ The goal of this project is to provide a lightweight and clear starting point fo
 ## Project Structure
 #### main.py:
 Runs a sample search and prints results
-#### PubMed.py            
+#### PubMed.py:            
 Handles the PubMed API (Esearch, Efetch)
-#### PubMedSearch.py      
+#### PubMedSearch.py:      
 Parses XML and extracts article details
 
 
