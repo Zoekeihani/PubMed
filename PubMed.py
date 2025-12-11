@@ -34,7 +34,7 @@ class PubMed:
 
 
 
-    def efetch(self, retmax=20):
+    def efetch(self):
         url = (self.api_base_url +
                f"efetch.fcgi?db=pubmed&query_key={self.qk}&WebEnv={self.webenv}&rettype={self.report_type}&retmode=xml&retmax={retmax}")
         r = requests.get(url)
